@@ -9,11 +9,10 @@ gulp.task('server', function() {
     .pipe(runElectron([], {cwd: "app"}));
   
   gulp.start('server:watch');
-  console.log("aaaa");
 });
 
 gulp.task('server:watch', function() {
-  gulp.watch("./app/*", ['server', runElectron.rerun]);
+  gulp.watch('./app/*', ['server', runElectron.rerun]);
 });
 
 gulp.task('sass', function () {
